@@ -15,7 +15,7 @@ function App() {
         // タスクを追加する
         const name = todoName.current.value;
         if (name === "") return;
-        
+
         setTodos((prevTodos) => {
             // スプレッド構文で配列を追加する
             return [...prevTodos, { id: uuidv4(), name: name, completed: false }];
@@ -33,7 +33,7 @@ function App() {
     const handleClear = () => {
         const newTodos = todos.filter((todo) => !todo.completed);
         setTodos(newTodos);
-    }
+    };
 
     return (
         // JSX fragment
