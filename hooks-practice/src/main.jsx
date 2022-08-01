@@ -8,6 +8,8 @@ const person = {
     age: 20
 }
 
+// createContextで作成したオブジェクトは下位コンポーネントでuseContextメソッドを使い取得できる
+// これにより状態変数の伝搬の煩雑さを減らすことができる
 const PersonContext = createContext(person);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

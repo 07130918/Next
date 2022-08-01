@@ -1,10 +1,11 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState, useRef } from 'react';
 import PersonContext from './main';
 import './App.css';
 
 function App() {
     const [count, setCount] = useState(0);
     const personContext = useContext(PersonContext);
+    const inputText = useRef();
 
     const handleClick = () => {
         setCount(count + 1);
@@ -14,6 +15,10 @@ function App() {
     useEffect(() => {
         console.log(`Hello Hooks! count is ${count}`);
     }, [count])
+
+    const handleRef = () => {
+        console.log(inputText.current.value);
+    }
 
 
     return (
@@ -25,6 +30,10 @@ function App() {
             <h1>useContext</h1>
             <p>{personContext.name}</p>
             <p>{personContext.age}</p>
+            <hr />
+            <h1>useRef</h1>
+            <input type="text" ref={inputText}/>
+            <button onClick={handleRef}>Click here!</button>
         </div>
     );
 }
