@@ -2,6 +2,7 @@ import { useCallback, useContext, useEffect, useMemo, useReducer, useRef, useSta
 import './App.css';
 import PersonContext from './main';
 import SomeChild from './SomeChild';
+import useLocalStorage from './useLocalStorage';
 
 const reducer = (state, action) => {
     // アクション名を決める
@@ -54,6 +55,9 @@ function App() {
         alert(`Count ${counter}`);
     }, [counter]);
 
+    // カスタムフックを使う
+    const [age, setAge] = useLocalStorage('age', 20);
+
     return (
         <div className="App">
             <h1>useState, useEffect</h1>
@@ -85,9 +89,14 @@ function App() {
 
             <hr />
             <h1>useCallback</h1>
-            {/* <SomeChild showCount={showCount} /> */}
+            {/* いまいち動かないので後回し */}
+            <SomeChild showCount={showCount} />
             <p>{counter}</p>
-            <button onClick={() => setCounter(counter + 1)}>+</button>
+
+            <hr />
+            <h1>Custom Hook</h1>
+            <p>{age}</p>
+            <button onClick={() => setAge(80)}>年齢をセット</button>
         </div>
     );
 }
