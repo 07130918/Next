@@ -1,12 +1,12 @@
-// ページ遷移に使う
 import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
+// ページ遷移に使う
 import Link from 'next/link'
 import utilStyles from '../styles/utils.module.css'
 
 export default function Home() {
     return (
-        <Layout home>
+        <Layout home={true}>
             <Head>
                 <title>{siteTitle}</title>
             </Head>

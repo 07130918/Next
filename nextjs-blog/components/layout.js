@@ -6,6 +6,7 @@ import Link from 'next/link'
 const name = 'Kota Sato'
 export const siteTitle = 'Next.js Sample Website'
 
+// propsの分割代入でchildrenにはLayoutで囲まれたコンポーネントが入る, homeは自作
 export default function Layout({ children, home }) {
     return (
         <div className={styles.container}>
