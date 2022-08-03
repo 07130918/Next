@@ -45,11 +45,11 @@ const App = ({ lectures }) => {
       </select>
 
       <div className="App-start">
-        <h2>練習コード（start）</h2>
+        <h2>練習コード start</h2>
         <DynamicLoader component={`./${lecId}/start/Example`} />
       </div>
       <div className="App-end">
-        <h2>完成コード（end）</h2>
+        <h2>完成コード end </h2>
         <DynamicLoader component={`./${lecId}/end/Example`} />
       </div>
     </div>
