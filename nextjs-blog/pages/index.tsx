@@ -1,16 +1,19 @@
-import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
-// ページ遷移に使う
-import Link from 'next/link'
+import { GetStaticProps } from 'next';
 
-import Date from '../components/date'
-import { getSortedPostsData } from '../lib/posts'
-import utilStyles from '../styles/utils.module.css'
+import Head from 'next/head';
+import Layout, { siteTitle } from '../components/layout';
+// ページ遷移に使う
+import Link from 'next/link';
+
+import Date from '../components/date';
+import { getSortedPostsData } from '../lib/posts';
+import utilStyles from '../styles/utils.module.css';
+
 
 // getStaticProps を使った、データ有りの静的生成(読み込み時に実行)
 // このように設定すれば、allPostsData prop は Home コンポーネントに渡される
 // getStaticPropsはサーバーサイドでのみ実行されるのでクライアント側に露呈しない。
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
     const allPostsData = getSortedPostsData()
     return {
         props: {
@@ -22,6 +25,7 @@ export async function getStaticProps() {
 // サーバーサイドレンダリングが必要な場合は、getServerSideProps を使う
 // リクエスト時に実行される
 // export async function getServerSideProps(context) {
+// (ts)export const getServerSideProps: GetServerSideProps = async context => {
 //     return {
 //         props: {
 //             // コンポーネントに渡すための props
