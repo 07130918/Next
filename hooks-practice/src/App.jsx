@@ -1,6 +1,8 @@
-import { useContext, useEffect, useMemo, useReducer, useRef, useState } from 'react';
+import { useCallback, useContext, useEffect, useMemo, useReducer, useRef, useState } from 'react';
 import './App.css';
 import PersonContext from './main';
+import SomeChild from './SomeChild';
+import useLocalStorage from './useLocalStorage';
 
 const reducer = (state, action) => {
     // アクション名を決める
@@ -36,7 +38,6 @@ function App() {
 
     const [count01, setCount01] = useState(0);
     const [count02, setCount02] = useState(0);
-
     // useMemo(ブラウザのメモリを使う(保存、取得))
     // 特定の状態変数(今回はcount02)の変更が重い処理の場合に他の変数がその影響を受けないようにする
     const square = useMemo(() => {
@@ -48,6 +49,15 @@ function App() {
         return count02 * count02;
     }, [count02]);
 
+    const [counter, setCounter] = useState(0);
+    // useCallback(コールバック関数をメモリに保存する)
+    const showCount = useCallback(() => {
+        alert(`Count ${counter}`);
+    }, [counter]);
+
+    // カスタムフックを使う
+    const [age, setAge] = useLocalStorage('age', 20);
+
     return (
         <div className="App">
             <h1>useState, useEffect</h1>
@@ -57,15 +67,18 @@ function App() {
             <h1>useContext</h1>
             <p>{personContext.name}</p>
             <p>{personContext.age}</p>
+
             <hr />
             <h1>useRef</h1>
             <input type="text" ref={inputText} />
             <button onClick={handleRef}>Click here!</button>
+
             <hr />
             <h1>useReducer</h1>
             <p>カウント: {state}</p>
             <button onClick={() => dispatch({ type: 'increment' })}>+</button>
             <button onClick={() => dispatch({ type: 'decrement' })}>-</button>
+
             <hr />
             <h1>useMemo</h1>
             <div>カウント1: {count01}</div>
@@ -73,6 +86,17 @@ function App() {
             <div>結果: {square}</div>
             <button onClick={() => setCount01(count01 + 1)}>+</button>
             <button onClick={() => setCount02(count02 + 1)}>+</button>
+
+            <hr />
+            <h1>useCallback</h1>
+            {/* いまいち動かないので後回し */}
+            <SomeChild showCount={showCount} />
+            <p>{counter}</p>
+
+            <hr />
+            <h1>Custom Hook</h1>
+            <p>{age}</p>
+            <button onClick={() => setAge(80)}>年齢をセット</button>
         </div>
     );
 }
