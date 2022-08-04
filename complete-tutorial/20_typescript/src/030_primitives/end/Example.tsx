@@ -1,31 +1,30 @@
 // POINT プリミティブとは
 // プリミティブとは、TypeScriptが扱うことの出来る基本的な値のこと
 // 具体的な例としては、文字列、数値、巨大な数値、真偽値、null、undefinedなどがある
-
 const Example = () => {
-  let str: string = 'Hello';
-  str = 'Bye';
-  console.log(str);
+    let str: string = 'Hello';
+    str = 'Bye';
+    console.log(str);
 
-  let num: number = 102;
-  console.log(num);
-  
-  let bignum: bigint = 103n;
-  console.log(bignum);
+    let num: number = 102;
+    console.log(num);
 
-  let bool: boolean = true;
-  console.log(bool);
+    let bnum: bigint = 103n;
+    console.log(bnum);
 
-  let nullish: null = null;
-  let undefinedValue: undefined = undefined;
+    let bool: boolean = true;
+    console.log(bool);
 
-  // リテラル型
-  let trueVal: true = true;
-  let num123: 123 = 123;
-  let strHello: 'Hello' = 'Hello';
+    let nullish: null = null;
+    let undefinedValue: undefined = undefined;
 
-  // any型(何でも格納可能)
-  let anyValue: any = [];
+    // リテラル型
+    let trueVal: true = true;
+    let num123: 123 = 123;
+    let strHello: 'Hello' = 'Hello';
+
+    // any型(何でも格納可能)
+    let anyValue: any = [];
 };
 
 export default Example;

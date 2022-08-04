@@ -1,28 +1,30 @@
 // POINT 型エイリアスについて学ぼう
-// TypeScriptでは、type文を用いて型に別名を付けることができる。これを 型エイリアス(type alias) と呼ぶ
-
 const Example = () => {
-  type User = {
-    name: string,
-    age: number
-  }
-  const user: User = { name: 'Taro', age: 10 }
+    // プリミティブ(すでに用意されている)型を組みわせて新たな名前をつけること
+    type User = {
+        name: string,
+        age: number
+    }
+    const user: User = { name: 'Taro', age: 10 }
 
-  type UserName = string;
-  type UserAge = number;
-  type UserGender = "man" | "woman" | "others";
+    type UserName = string;
+    type UserAge = number;
+    type UserGender = "man" | "woman" | "others";
 
-  type UserProfile = {
-    name: UserName,
-    age: UserAge,
-    gender: UserGender,
-  }
+    type UserProfile = {
+        name: UserName,
+        age: UserAge,
+        gender: UserGender,
+    }
 
-  const userProfile: UserProfile = {
-    name: 'Hanako',
-    age: 21,
-    gender: "woman"
-  }
+    const userProfile: UserProfile = {
+        name: 'Hanako',
+        age: 21,
+        gender: "woman"
+    }
+    console.log(userProfile.name);
+    user.name = 'kkk'
+    console.log(user)
 };
 
 export default Example;
