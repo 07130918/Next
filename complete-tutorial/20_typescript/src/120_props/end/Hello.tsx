@@ -3,10 +3,11 @@ type HelloProps = {
     children: React.ReactNode
 }
 
-const Hello: React.FC<HelloProps> = (props) => {
-    return <h1>Hello {props.text}! {props.children}</h1>
+const Hello: React.FC<HelloProps> = ({children, text}) => {
+    return <h1>Hello {text}! {children}</h1>
 }
 
+// props.fnがどのような型であるかを定義する
 type FnProps = {
     fn: (text: string) => void
 }
