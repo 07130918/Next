@@ -2,15 +2,17 @@
 import { Todo } from "./Example";
 
 type TaskListProps = {
-  todos: Todo[];
+    todos: Todo[];
 };
 
-export const TaskList: React.FC<TaskListProps> = (props) => {
-  return (
-    <ul>
-      {props.todos.map((todo) => {
-        return <li key={todo.id}>{todo.text}</li>;
-      })}
-    </ul>
-  );
+const TaskList: React.FC<TaskListProps> = ({ todos }) => {
+    return (
+        <ul>
+            {todos.map((todo) => {
+                return <li key={todo.id}>{todo.text}</li>;
+            })}
+        </ul>
+    );
 };
+
+export default TaskList;
