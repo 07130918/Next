@@ -2,7 +2,7 @@
 import React from "react";
 
 const Bye = () => {
-      return <h2>GoodBye!</h2>;
+    return <h2>GoodBye!</h2>;
 }
 
 // const Hello = () => {
@@ -10,15 +10,14 @@ const Bye = () => {
 // }
 
 const Example = () => {
-  return (
-    <div>
-      <Bye/>
-      {/* <Hello/> */}
-    </div>
-  );
+    return (
+        <div>
+            <Bye />
+            {/* <Hello/> */}
+        </div>
+    );
 };
 
-// console.log(Example());
+console.log(Example());
 
 export default Example;
-
