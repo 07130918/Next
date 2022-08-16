@@ -1,0 +1,17 @@
+/04_react_basic/node_modules
+/05_state_and_event/node_modules
+/06_control_and_form/node_modules
+/07_styling_component/node_modules
+/08_other_function/node_modules
+/09_debugging/node_modules
+/10_functional_programming/node_modules
+/11_hooks_p1/node_modules
+/12_hooks_p2/node_modules
+/13_redux/node_modules
+/14_class_component/node_modules
+/15_performance/node_modules
+/16_rest_api/node_modules
+/17_nextjs_p1/node_modules
+/18_nextjs_p2/node_modules
+/19_test/node_modules
+/20_typescript/node_modules
