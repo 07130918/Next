@@ -7,7 +7,6 @@ const Example = () => {
     const [person, setPerson] = useState(personObj);
 
     const changeName = (e) => {
-        person.name = '';
         console.log({ ...person, name: e.target.value, age: 20 })
         // setPerson({ name: e.target.value, age: person.age })
         setPerson({ ...person, name: e.target.value })
