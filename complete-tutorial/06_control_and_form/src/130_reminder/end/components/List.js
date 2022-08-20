@@ -1,4 +1,4 @@
-const List = ({todos, deleteTodo}) => {
+const List = ({ todos, deleteTodo }) => {
     const complete = (id) => {
         deleteTodo(id)
     }
@@ -7,7 +7,9 @@ const List = ({todos, deleteTodo}) => {
             {todos.map(todo => {
                 return (
                     <div key={todo.id}>
-                        <button onClick={() => complete(todo.id)}>完了</button>
+                        <button onClick={() => complete(todo.id)}>
+                            完了
+                        </button>
                         <span>{todo.content}</span>
                     </div>
                 )

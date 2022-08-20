@@ -1,13 +1,13 @@
 // POINT Reminder(Todoアプリ)の作り方
-import Todo from "./components/Todo"
+import Todo from "./components/Todo";
 
 const Example = () => {
-  return (
-    <>
-      <h2>Reminder</h2>
-      <Todo />
-    </>
-  );
+    return (
+        <>
+            <h2>Reminder</h2>
+            <Todo />
+        </>
+    );
 };
 
 export default Example;
