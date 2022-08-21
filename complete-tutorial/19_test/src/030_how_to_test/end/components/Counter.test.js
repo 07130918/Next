@@ -1,5 +1,5 @@
 /* POINT テストコードの基本
-Arrage:(準備)
+Arrange:(準備)
 Act:(実行)
 Assertion:(結果の確認)
 */
@@ -7,7 +7,7 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import Counter from "./Counter";
 
 test('「カウントアップ」押下で「現在のカウント」が+1されるか', () => {
-    // Arrage
+    // Arrange
     render(<Counter originCount={0} />);
 
     // 更新前
@@ -19,6 +19,6 @@ test('「カウントアップ」押下で「現在のカウント」が+1され
     fireEvent.click(btn);
 
     // Assertion
-    const spanEl = screen.getByText('現在のカウント:1')
+    const spanEl = screen.getByText('現在のカウント:1');
     expect(spanEl).toBeInTheDocument();
 })
