@@ -1,12 +1,11 @@
-
 import Message from "./components/Message";
 
 const Example = () => {
-  return (
-    <>
-      <Message />
-    </>
-  );
+    return (
+        <>
+            <Message />
+        </>
+    );
 };
 
 export default Example;
