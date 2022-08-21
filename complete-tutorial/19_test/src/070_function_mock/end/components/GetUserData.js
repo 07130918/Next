@@ -1,32 +1,32 @@
-import { useEffect, useState } from "react";
 import axios from "axios";
+import { useEffect, useState } from "react";
 
 const GetUserData = ({ url }) => {
-  const [userData, setUserData] = useState(null);
+    const [userData, setUserData] = useState(null);
 
-  useEffect(() => {
-    axios.get(url).then((response) => {
-      // console.log(response)
-      setUserData(response.data)
-    });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    useEffect(() => {
+        axios.get(url).then((response) => {
+            console.log(response);
+            setUserData(response.data)
+        });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
-  return (
-    <div>
-      {userData ? (
-        <>
-          <h2>プロフィール</h2>
-          <ul>
-            <li>ID: {userData.id}</li>
-            <li>Name: {userData.name}</li>
-          </ul>
-        </>
-      ) : (
-        <h1>通信中です！</h1>
-      )}
-    </div>
-  );
+    return (
+        <div>
+            {userData ? (
+                <>
+                    <h2>プロフィール</h2>
+                    <ul>
+                        <li>ID: {userData.id}</li>
+                        <li>Name: {userData.name}</li>
+                    </ul>
+                </>
+            ) : (
+                <h1>通信中です！</h1>
+            )}
+        </div>
+    );
 };
 
 export default GetUserData;
