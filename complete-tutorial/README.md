@@ -9,6 +9,10 @@
 - 130: ToDoリストを作り、データの受け渡し、preventDefaultを学ぶ
 ## セクション7: スタイリング
 ## セクション8: ReactでDOM操作
+- 010: 基本的なモーダルの作り方
+- 030: useRef
+- 040: forwardRef
+- 050: useImperativeHandle
 ## セクション10: 関数型プログラミング
 ## セクション11: React Hooks 様々な状態管理の方法
 ## セクション12: React Hooks useEffectとカスタムフック

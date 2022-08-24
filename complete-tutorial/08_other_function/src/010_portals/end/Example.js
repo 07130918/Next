@@ -7,34 +7,34 @@ import Modal from "./components/Modal";
 第二引数: レンダー先のDOM要素
 */
 const ModalPortal = ({ children }) => {
-  const target = document.querySelector(".container.end");
-  return createPortal(children, target);
+    const target = document.querySelector(".container.end");
+    return createPortal(children, target);
 };
 
 const Example = () => {
-  const [modalOpen, setModalOpen] = useState(false);
-  return (
-    
-    <div onClick={() => console.log('空のdiv')}>
-      <div className="container end" onClick={() => console.log('container')} />
+    const [modalOpen, setModalOpen] = useState(false);
+    return (
 
-      <button
-        type="button"
-        onClick={() => setModalOpen(true)}
-        disabled={modalOpen}
-      >
-        モーダルを表示する
-      </button>
-      
-      {modalOpen && (
-        
-        <ModalPortal>
-          <Modal handleCloseClick={() => setModalOpen(false)} />
-        </ModalPortal>
-      )}
-      
-    </div>
-  );
+        <div onClick={() => console.log('空のdiv')}>
+            <div className="container end" onClick={() => console.log('container')} />
+
+            <button
+                type="button"
+                onClick={() => setModalOpen(true)}
+                disabled={modalOpen}
+            >
+                モーダルを表示する
+            </button>
+
+            {modalOpen && (
+
+                <ModalPortal>
+                    <Modal handleCloseClick={() => setModalOpen(false)} />
+                </ModalPortal>
+            )}
+
+        </div>
+    );
 };
 
 export default Example;
