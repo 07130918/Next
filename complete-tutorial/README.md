@@ -14,6 +14,8 @@
 - 040: forwardRef
 - 050: useImperativeHandle
 ## セクション10: 関数型プログラミング
+- 020: 関数型プログラミングとは、純粋関数とは
+- 060: Reactにおける不変性
 ## セクション11: React Hooks 様々な状態管理の方法
 ## セクション12: React Hooks useEffectとカスタムフック
 ## セクション13: ReduxとRedux Toolkit
