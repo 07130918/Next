@@ -6,14 +6,14 @@ import OtherChild from "./component/OtherChild";
 export const MyContext = createContext();
 
 const Example = () => {
-  const stateAndSetter = useState(0);
-  // stateAndSetter = [ state, setState ]
-  return (
-    <MyContext.Provider value={stateAndSetter}>
-      <Child />
-      <OtherChild />
-    </MyContext.Provider>
-  );
+    const stateAndSetter = useState(0);
+    return (
+        // コンテキスト名.Providerコンポーネントのvalue属性で値を渡す
+        <MyContext.Provider value={stateAndSetter}>
+            <Child />
+            <OtherChild />
+        </MyContext.Provider>
+    );
 };
 
 export default Example;

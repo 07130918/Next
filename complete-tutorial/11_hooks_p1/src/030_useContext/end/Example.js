@@ -4,7 +4,7 @@ import Child from "./components/Child";
 export const MyContext = createContext("hello");
 
 const Example = () => {
-  return <Child />;
+    return <Child />;
 };
 
 export default Example;

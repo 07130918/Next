@@ -6,14 +6,14 @@ const CounterDispatchContext = createContext();
 const CounterProvider = ({ children }) => {
     const [state, dispatch] = useReducer((prev, { type, step }) => {
         switch (type) {
-          case "+":
-            return prev + step;
-          case "-":
-            return prev - step;
-          default:
-            throw new Error('不明なactionです。')
+            case "+":
+                return prev + step;
+            case "-":
+                return prev - step;
+            default:
+                throw new Error('不明なactionです。')
         }
-      }, 0);
+    }, 0);
     return (
         <CounterContext.Provider value={state}>
             <CounterDispatchContext.Provider value={dispatch}>
@@ -31,4 +31,4 @@ const useCounterDispatch = () => {
     return useContext(CounterDispatchContext);
 }
 
-export { CounterProvider, useCounter, useCounterDispatch }
+export { CounterProvider, useCounter, useCounterDispatch };

@@ -1,17 +1,15 @@
-// POINT Contextコードの整理方法
-
-import "./Example.css";
-import Main from "./components/Main";
 import Header from "./components/Header";
-import { ThemeProvider } from "./context/ThemeContext";
+import Main from "./components/Main";
+import ThemeProvider from "./context/ThemeContext";
+import "./Example.css";
 
 const Example = () => {
-  return (
-    <ThemeProvider>
-      <Header />
-      <Main />
-    </ThemeProvider>
-  );
+    return (
+        <ThemeProvider>
+            <Header />
+            <Main />
+        </ThemeProvider>
+    );
 };
 
 export default Example;
