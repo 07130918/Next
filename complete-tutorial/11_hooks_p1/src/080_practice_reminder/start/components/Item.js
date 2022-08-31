@@ -23,7 +23,6 @@ const Item = ({ todo }) => {
     };
 
     const complete = (todo) => {
-        // プロパティ名と値が同じ場合は、省略できる(todo:todoとしなくて良い)
         dispatch({ type: "todo/delete", todo });
     };
 

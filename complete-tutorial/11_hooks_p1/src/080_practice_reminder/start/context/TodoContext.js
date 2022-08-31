@@ -13,7 +13,6 @@ const todoReducer = (todos, {type, todo}) => {
             });
         case "todo/update":
             return todos.map((_todo) => {
-                // idが同じであれば、todoを上書きする
                 return _todo.id === todo.id
                     ? { ..._todo, ...todo }
                     : { ..._todo };
