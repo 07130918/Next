@@ -1,56 +1,48 @@
-import { useEffect, useState, useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
+import Random from "./Random";
 
 // POINT useLayoutEffectとは？useEffectとの違い
 const Example = () => {
-  const [isDisp, setIsDisp] = useState(true);
+    const [isDisplay, setIsDisplay] = useState(true);
 
-  return (
-    <>
-      {isDisp && <Timer/>}
-      <button onClick={() => setIsDisp(prev => !prev)}>トグル</button>
-    </>
-  )
+    return (
+        <>
+            {isDisplay && <Timer />}
+            <button onClick={() => setIsDisplay(prev => !prev)}>トグル</button>
+        </>
+    )
 }
 
 const Timer = () => {
-  const [time, setTime] = useState(0);
+    const [time, setTime] = useState(0);
 
-  useEffect(() => {
-    // console.log('init');
-    let intervalId = null;
-    intervalId = window.setInterval(() => {
-      setTime(prev => prev + 1);
-    }, 1000);
-    return () => {
-      window.clearInterval(intervalId)
-      // console.log('end');
-    }
-  }, [])
-  
-  useEffect(() => {
-    // console.log('updated');
-    
-    document.title = 'counter:' + time;
-    window.localStorage.setItem('time-key-end', time);
+    useEffect(() => {
+        let intervalId = null;
+        intervalId = window.setInterval(() => {
+            setTime(prev => prev + 1);
+        }, 1000);
+        return () => {
+            window.clearInterval(intervalId)
+        }
+    }, [])
 
-    return () => {
-      // debugger
-      // console.log('updated end');
-    }
-  }, [time]);
+    useEffect(() => {
+        document.title = 'counter:' + time;
+        window.localStorage.setItem('time-key-end', time);
+    }, [time]);
 
-  useLayoutEffect(() => {
-    const _time = parseInt(window.localStorage.getItem('time-key-end'));
-    if(!isNaN(_time)) {
-      setTime(_time);
-    }
-  }, [])
+    // useLayoutEffectはuseEffectより先に実行されるので、先に行いたい処理がある場合はuseLayoutEffectを使う手もある
+    useLayoutEffect(() => {
+        const _time = parseInt(window.localStorage.getItem('time-key-end'));
+        if (!isNaN(_time)) setTime(_time);
+    }, [])
 
-  return (
-    <h3>
-      <time>{time}</time>
-      <span>秒経過</span>
-    </h3>
+    return (
+        <h3>
+            <time>{time}</time>
+            <span>秒経過</span>
+            <Random />
+        </h3>
     );
 };
 
