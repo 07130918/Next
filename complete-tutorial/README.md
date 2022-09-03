@@ -24,10 +24,12 @@
 - 050, 060: useContextのリファクタリング
 - 065: useContextとuseReducerの組み合わせ
 ## セクション12: React Hooks useEffectとカスタムフック
+### キーワード: 副作用 
+#### コンポーネントは、JSXを構築する場所であり、JSXの生成に直接関係ない処理は全て副作用として扱われる。
 - 020: useEffectと依存配列
 - 030: useEffectの戻り値(クリーンアップ処理)
 - 040: useEffectのライフサイクル
-
+![useEffect_lifecycle](https://user-images.githubusercontent.com/70265286/188259529-02376652-9d4a-4c06-883d-c705a0069b71.jpg)
 - 050: useLayoutEffect
 - 070, 075: カスタムフック
 ## セクション13: ReduxとRedux Toolkit
