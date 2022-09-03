@@ -24,6 +24,12 @@
 - 050, 060: useContextのリファクタリング
 - 065: useContextとuseReducerの組み合わせ
 ## セクション12: React Hooks useEffectとカスタムフック
+- 020: useEffectと依存配列
+- 030: useEffectの戻り値(クリーンアップ処理)
+- 040: useEffectのライフサイクル
+
+- 050: useLayoutEffect
+- 070, 075: カスタムフック
 ## セクション13: ReduxとRedux Toolkit
 ## セクション14: クラスコンポーネント
 ## セクション15: パフォーマンス最適化
