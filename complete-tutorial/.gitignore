@@ -7,7 +7,8 @@
 /10_functional_programming/node_modules
 /11_hooks_p1/node_modules
 /12_hooks_p2/node_modules
-/13_redux/node_modules
+/13_redux/end/node_modules
+/13_redux/start/node_modules
 /14_class_component/node_modules
 /15_performance/node_modules
 /16_rest_api/node_modules
