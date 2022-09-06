@@ -11,12 +11,12 @@ import Example from "./010_redux_no_rtk/Example";
 
 
 const App = () => {
-  return (
-    <div className="App">
-      <h2>完成コード（end）</h2>
-      <Example />
-    </div>
-  );
+    return (
+        <div className="App">
+            <h2>完成コード（end）</h2>
+            <Example />
+        </div>
+    );
 };
 
 export default App;
