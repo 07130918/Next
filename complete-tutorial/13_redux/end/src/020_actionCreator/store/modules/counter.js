@@ -1,14 +1,14 @@
 const initialState = 0;
 
 const reducer = (state = initialState, { type, payload }) => {
-  switch (type) {
-    case "counter/+":
-      return state + payload;
-    case "counter/-":
-      return state - payload;
-    default:
-      return state;
-  }
+    switch (type) {
+        case "counter/+":
+            return state + payload;
+        case "counter/-":
+            return state - payload;
+        default:
+            return state;
+    }
 };
 
 const add = (payload) => {
@@ -25,4 +25,4 @@ const minus = (payload) => {
     }
 }
 
-export { reducer, add, minus }
+export { reducer, add, minus };

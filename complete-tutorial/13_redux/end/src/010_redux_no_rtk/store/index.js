@@ -1,17 +1,16 @@
 import { createStore } from "redux";
 
-const initialState = 0;
-const reducer = (state = initialState, { type, step }) => {
+const reducer = (state=0, { type, step }) => {
     switch (type) {
-      case "+":
-        return state + step;
-      case "-":
-        return state - step;
-      default:
-        return state;
+        case "+":
+            return state + step;
+        case "-":
+            return state - step;
+        default:
+            return state;
     }
-  };
+};
 
-export default createStore(
-    reducer
-);
+// グローバルな状態管理を行うためのストアを作成
+// そこにreducerの登録をする
+export default createStore(reducer);
