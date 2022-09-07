@@ -1,3 +1,4 @@
+//  toolkitにはimmerが組み込まれている
 import { produce } from "immer";
 
 const state = {
@@ -8,11 +9,11 @@ const state = {
 // const newState = state;
 // newState.name = 'John';
 const newState = produce(state, draft => {
-    // draft.name = 'John';
+    draft.name = 'John';
     // draft.hobbies[0] = 'baseball';
 
     console.log(draft);
-    return [];
+    // return [];
 })
 
 console.log(state, newState)
