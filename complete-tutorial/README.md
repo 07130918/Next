@@ -21,6 +21,8 @@
 - 025: useReducer練習問題
 - 030: useContextの使い方
 - 040: useContextでstateを管理する
+
+![Screen Shot 2022-09-06 at 8 38 00](https://user-images.githubusercontent.com/70265286/189475315-42275163-e020-47c9-9bc8-a60df0c808b3.jpg)
 - 050, 060: useContextのリファクタリング
 - 065: useContextとuseReducerの組み合わせ
 ## セクション12: React Hooks useEffectとカスタムフック
@@ -29,10 +31,21 @@
 - 020: useEffectと依存配列
 - 030: useEffectの戻り値(クリーンアップ処理)
 - 040: useEffectのライフサイクル
+
 ![useEffect_lifecycle](https://user-images.githubusercontent.com/70265286/188259529-02376652-9d4a-4c06-883d-c705a0069b71.jpg)
 - 050: useLayoutEffect
 - 070, 075: カスタムフック
 ## セクション13: ReduxとRedux Toolkit
+- 010: Reduxの使い方
+
+![Screen Shot 2022-09-06 at 8 38 56](https://user-images.githubusercontent.com/70265286/189475382-6c567a73-e525-441f-ad46-0d6449ef6f09.jpg)
+
+![Screen Shot 2022-09-10 at 14 15 30](https://user-images.githubusercontent.com/70265286/189475425-9fd664ca-9101-408b-bb93-02b37aa514d9.jpg)
+- 030: Redux Toolkitの使い方
+- 040: Redux Toolkitにおけるイミュータブルな値の変更
+- 050: Redux Thunkで副作用を処理する
+- 060: createAsyncThunkで非同期処理のステータスを画面に表示する
+- 070: Redux Middlewareの定義
 ## セクション14: クラスコンポーネント
 ## セクション15: パフォーマンス最適化
 ## セクション16: Rest APIでサーバーと通信
