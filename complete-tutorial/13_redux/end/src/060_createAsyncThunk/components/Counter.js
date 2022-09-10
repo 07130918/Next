@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux"
-import { add, minus, addAsync, addAsyncWithStatus } from "../store/modules/counter"
+import { add, minus, addAsyncWithStatus } from "../store/modules/counter"
 
 import CounterResult from "./CounterResult"
 import CounterButton from "./CounterButton"

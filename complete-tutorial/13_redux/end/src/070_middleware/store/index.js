@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
+import logger from "./middleware/logger";
 import reducer from "./modules/counter";
-import logger from "./middleware/logger"
 export default configureStore({
-  reducer: {
-    counter: reducer
-  },
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger)
+    reducer: {
+        counter: reducer
+    },
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger)
 });
