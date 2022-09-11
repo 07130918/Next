@@ -6,14 +6,14 @@ import { ChakraProvider } from "@chakra-ui/react";
 import Todo from "./components/Todo";
 
 const Example = () => {
-  // POINT Chakra UIを使用するためにChakraProviderでラップする
-  return (
-    <>
-      <ChakraProvider>
-        <Todo />
-      </ChakraProvider>
-    </>
-  );
+    // POINT Chakra UIを使用するためにChakraProviderでラップする
+    return (
+        <>
+            <ChakraProvider>
+                <Todo />
+            </ChakraProvider>
+        </>
+    );
 };
 
 export default Example;

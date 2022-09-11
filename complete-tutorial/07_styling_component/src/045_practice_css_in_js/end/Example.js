@@ -16,21 +16,21 @@ const SecondButton = styled(FirstButton)`
 `;
 
 const ThirdButton = styled(SecondButton)`
-  background: ${(props) => (props.dark ? "black" : "green")};
+  background: ${({dark}) => (dark ? "black" : "green")};
 `;
 
 const Example = () => {
-  return (
-    <>
-      <FirstButton>ボタン1</FirstButton>
+    return (
+        <>
+            <FirstButton>ボタン1</FirstButton>
 
-      <SecondButton>ボタン2</SecondButton>
+            <SecondButton>ボタン2</SecondButton>
 
-      <ThirdButton>ボタン3</ThirdButton>
+            <ThirdButton>ボタン3</ThirdButton>
 
-      <ThirdButton dark>ボタン3</ThirdButton>
-    </>
-  );
+            <ThirdButton dark>ボタン3</ThirdButton>
+        </>
+    );
 };
 
 export default Example;
