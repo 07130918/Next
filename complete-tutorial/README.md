@@ -63,6 +63,10 @@
 - 09: ページをまたぐ状態の保持
 - 10: _app.jsファイルでレイアウトの動的な変更を行う
 ## セクション18: Next.js 2
+- 010: Server side rendering
+- 020: Static generation
+- 030: Static generation data fetch
+- 040: Next.js Backend
 ## セクション19: テスト
 - 030: 基本的なテストの行い方
 - 040: テストをグループ化するdescribe関数

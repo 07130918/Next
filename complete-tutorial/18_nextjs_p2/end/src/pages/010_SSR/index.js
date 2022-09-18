@@ -7,7 +7,9 @@ export default function SSR() {
     // console.log(message)
 
     useEffect(() => {
+        // useEffectはnodejsではなくブラウザで実行される
         console.log('useEffect');
+        console.log('🚀 ~ file: index.js ~ line 12 ~ useEffect ~ useEffect', useEffect);
         window.localStorage.setItem('key', 'value');
         document.cookie = 'val=0; path=/;'
     }, [])

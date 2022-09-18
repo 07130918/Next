@@ -1,13 +1,13 @@
 // POINT API Routesの使い方
 import axios from "axios";
-import ArticleList from "../../components/articleList";
 import Head from "next/head";
 import { useEffect, useState } from "react";
+import ArticleList from "../../components/articleList";
 
 // http://localhost:4010/040_api_routes
 
 export default function Page() {
-    const [ articles, setArticles ] = useState([]);
+    const [articles, setArticles] = useState([]);
 
     useEffect(() => {
         const getArticles = async () => {
@@ -17,8 +17,8 @@ export default function Page() {
         }
         getArticles();
     }, [])
-    
-    if(!articles) {
+
+    if (!articles) {
         return <div>データがありません。</div>
     }
 

@@ -9,34 +9,34 @@ import Article from "../../components/article";
 const ENDPOINT = "http://localhost:4030/articles";
 
 export default function Detail({ article }) {
-  const router = useRouter();
-  if (router.isFallback) {
-    return <h3>Loading...</h3>;
-  }
-  return (
-    <>
-        <Head>
-            <title>{article.title}</title>
-        </Head>
-        <Article data={article} />
-    </>
-  );
+    const router = useRouter();
+    if (router.isFallback) {
+        return <h3>Loading...</h3>;
+    }
+    return (
+        <>
+            <Head>
+                <title>{article.title}</title>
+            </Head>
+            <Article data={article} />
+        </>
+    );
 }
 
 export async function getStaticPaths() {
-  const result = await axios.get(ENDPOINT).then((res) => res.data);
+    const result = await axios.get(ENDPOINT).then((res) => res.data);
 
-  if (!result) return;
+    if (!result) return;
 
-  const paths = result.map((article) => ({
-    params: { detail: `${article.id}` },
-  }));
+    const paths = result.map((article) => ({
+        params: { detail: `${article.id}` },
+    }));
 
-  return { paths, fallback: true };
+    return { paths, fallback: true };
 }
 
 export async function getStaticProps({ params }) {
-  const url = `${ENDPOINT}/${params.detail}`;
-  const result = await axios.get(url).then((res) => res.data);
-  return { props: { article: result } };
+    const url = `${ENDPOINT}/${params.detail}`;
+    const result = await axios.get(url).then((res) => res.data);
+    return { props: { article: result } };
 }

@@ -1,10 +1,10 @@
 // POINT [SG]フェッチしたデータで静的なページを作成
 import axios from "axios";
-import ArticleList from "../../components/articleList";
 import Head from "next/head";
+import ArticleList from "../../components/articleList";
 
 export default function Page({ articles }) {
-    if(!articles) {
+    if (!articles) {
         return <div>データがありません。</div>
     }
 
